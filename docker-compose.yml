@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    image: trestletech/plumber
+    command: /app/plumber.R
+    volumes:
+     - ./app:/app
+    restart: always
+    ports:
+     - "8000:8000"
