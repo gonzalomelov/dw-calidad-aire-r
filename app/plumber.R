@@ -5,6 +5,8 @@ library(openair)
 function(a) {
   v <- as.numeric(unlist(strsplit(a, split=",")))
   # paste(v, collapse=" ")
-  result <- bootMeanDF(v)
+  bootstraping <- bootMeanDF(v)
+  percentile <- quantile(v, c(.95))
+  result <- cbind(bootstraping,percentile)
   toString(result)
 }
