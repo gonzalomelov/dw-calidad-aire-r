@@ -4,6 +4,7 @@ services:
     build: ./app/
     volumes:
      - ./app:/app
+    network_mode: bridge
     restart: always
     ports:
      - "8000:8000"
