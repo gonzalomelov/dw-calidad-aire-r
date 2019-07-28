@@ -1,6 +1,6 @@
 library(openair)
 
-#' @get /hello
+#' @post /hello
 #' @html
 function(a) {
   v <- as.numeric(unlist(strsplit(a, split=",")))
