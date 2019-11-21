@@ -7,7 +7,7 @@ services:
     network_mode: bridge
     restart: always
     ports:
-     - "8000:8000"
+     - "8073:8000"
     command: /app/plumber.R
     labels:
     - traefik.enable=false
